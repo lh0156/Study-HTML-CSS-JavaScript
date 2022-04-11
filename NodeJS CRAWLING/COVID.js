@@ -15,19 +15,22 @@ const parsing = async (keyword) => {
     const $status_info = $(".info_video");
     
     const guideList = [];
-
+    
     $status_info.each(async (index,node) => {
-
+        
         const guide = $(node).find(".scm_ellipsis a").text();
         
         guideList.push(guide);
-
-
+        
+        
     })
-
-    console.log(guideList[0]);
-
+    
+    return guideList[0];
+    
 }
 
-    parsing();
+
+    const ment = parsing();
+    console.log(ment);
+
     
