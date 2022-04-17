@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <title>CssZoom</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            position: absolute;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            ScreenResize();
+        });
+
+        $(window).resize(function () {
+            ScreenResize();
+        });
+
+
+
+        var scale = 1;
+
+        function ScreenResize() {
+            var width = $(window).width();
+            var height = $(window).height();
+
+            var viewWidth = 0;
+            var viewHeight = 0;
+
+            if ((width / height) > 1) {
+                scale = width / 1920
+            }
+            else {
+                scale = width / 320
+            }
+
+            $(".zoom").css("transform", " scale(" + scale + ")");
+            $(".zoom").css("transform-origin", "0px 0px");
+
+        }
+
+    </script>
+</head>
+
+<body class='zoom' style="background-color:black;">
+    <iframe src="index.html" width="1920px" ; height="1305px" style="border:0px; background-color: #FFFFFF;"></iframe>
+</body>

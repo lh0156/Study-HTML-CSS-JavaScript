@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title>CssZoom Vanila Java Script Version</title>
+    <style>
+        body {
+            position: absolute;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+            transform-origin: 0 0;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DomContentLoaded', () => {
+            ScreenResize();
+        });
+
+        window.addEventListener('resize', () => {
+            ScreenResize();
+        });
+
+
+        function ScreenResize() {
+
+            let scale = 1;
+
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const zoom = document.querySelector(".zoom");
+
+            width / height > 1 ? scale = (width / 1920) : scale = (width / 320);
+
+            zoom.style.transform = ("transform", " scale(" + scale + ")");
+            
+        }
+
+    </script>
+</head>
+
+<body class='zoom' style="background-color:black;">
+    <iframe src="index.html" width="1920px" ; height="1305px" style="border:0px; background-color: #FFFFFF;"></iframe>
+</body>
