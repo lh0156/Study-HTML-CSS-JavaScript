@@ -13,7 +13,7 @@
     </style>
 
     <script>
-        document.addEventListener('DomContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             ScreenResize();
         });
 
@@ -21,18 +21,16 @@
             ScreenResize();
         });
 
+        let scale = 1;
 
         function ScreenResize() {
 
-            let scale = 1;
-
             const width = window.innerWidth;
             const height = window.innerHeight;
-            const zoom = document.querySelector(".zoom");
-
+            
             width / height > 1 ? scale = (width / 1920) : scale = (width / 320);
 
-            zoom.style.transform = ("transform", " scale(" + scale + ")");
+            document.querySelector(".zoom").style.transform = ("transform", " scale(" + scale + ")");
             
         }
 
