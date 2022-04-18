@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<title>SalesDemo</title>
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="apple-mobile-web-app-title" content="SalesDemo">
+	<meta name="application-name" content="SalesDemo" />
+	<link rel="shortcut icon" href="/Longview/10/Analytics/client/img/favicon.ico" sizes="256x256" />
+	<link href="/Longview/10/Analytics/client/img/favicon57.png" rel="apple-touch-icon-precomposed">
+	<link href="/Longview/10/Analytics/client/img/favicon72.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+	<link href="/Longview/10/Analytics/client/img/favicon114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+	<link href="/Longview/10/Analytics/client/img/favicon144.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+	<meta name="msapplication-TileImage" content="/Longview/10/Analytics/clientfavicon144.png"/>
+	<meta name="msapplication-TileColor" content="#c5eeff"/>
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	
+	<!--jquery-3.4.1.slim.min.js, popupDrag.js 선언 -->
+	<script type="text/javascript" src="jquery-3.4.1.slim.min.js"></script>
+	<script src="popupDrag.js"></script>
+	
+	<style>
+	@-ms-viewport{
+		width: device-width;
+	}
+	</style>
+	
+	<link type="text/css" rel="stylesheet" href="/Longview/10/Analytics/client/css/arcclient.css"/>
+	
+</head>
+<body id="arcBody" style="background-color:Silver">
+
+		<div id="arcContainer" class="arcContainer"></div>
+	<script type="text/javascript">
+		var script = "/Longview/10/Analytics/client/js/version_cb.js?b=" + (new Date()).getTime();
+		document.writeln("<script type='text/javascript' src='" + script + "'><\/script>");
+	</script>
+	<script type="text/javascript">
+		var ARCPLAN = ARCPLAN || {},
+			version_argument = version_argument || "",
+			startupScript;
+
+		ARCPLAN.language = "server";
+		ARCPLAN.application = "SalesDemo";
+		ARCPLAN.startDocName = "drag.apd";
+		ARCPLAN.arcCgiSite = "/Longview/10/Analytics/scripts/arcCGI10.exe";
+
+		startupScript = "/Longview/10/Analytics/client/js/arcclientstartup.js?" + version_argument;
+		document.writeln("<script type='text/javascript' src='" + startupScript + "'><\/script>");
+	</script>
+
+
+</body>
+</html>

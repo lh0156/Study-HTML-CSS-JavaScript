@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .popup {
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <p>위치를 보려면 마우스를 이동하십시오..</p>
+    <p id="screen-log"></p>
+    <div class = "popup">
+        <div class="popupDlg" data-id="호호호"></div>
+    </div>
+    
+
+    <script>
+        let mouseposX;
+        let mouseposY;
+        let captured = false;
+        let captured_id = "";
+
+        document.addEventListener("mousedown", (event) => {
+            let popupDlg = document.querySelector(".popupDlg");
+            mouseposX = event.clientX;
+            mouseposY = event.clientY;
+            captured = true;
+
+            captured_id = popupDlg.getAttribute("data-id");
+
+
+        })
+
+        document.addEventListener('mousemove', (event) => {
+
+            if(captured === true) {
+
+                let tempX = event.clientX;
+                let tempY = event.clientY;
+
+                let moveX = tempX - mouseposX;
+                let moveY = tempY - mouseposY;
+
+                var position = document.getBoundingClientRect(captured_id);
+                
+                alert(position.left);
+                alert(position.top);
+
+            }
+
+        })
+
+        document.addEventListener("mouseup", () => {
+            captured = false;
+            captured_id = "";
+        })
+    </script>
+</body>
+
+</html>
