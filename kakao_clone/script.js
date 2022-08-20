@@ -5,7 +5,7 @@ function getTime() {
     let hur = d.getHours();		// 시
     let min = d.getMinutes();	//분
 
-    let timeBoard = document.querySelector("#status-bar_Time");
+    let timeBoard = document.querySelector("#status-bar__Time");
 
     let time = hur + ":" + min;
 

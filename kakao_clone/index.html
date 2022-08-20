@@ -6,22 +6,35 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome to Yunseop talk</title>
-    <script src="script.js"></script>
+    <style>
+        .status-bar {
+            display: flex;
+            justify-content: space-around;
+
+        }
+    </style>
 </head>
 <body>
-    <div id="status-bar">
-        <div class="status-bar_column">
+    <div class="status-bar">
+        <div class="status-bar__column">
             <span>No Service</span>
-            <!-- to do Wifi Icon -->
+            <i class="fa-solid fa-wifi"></i>
         </div>
-        <div class="status-bar_column">
-            <span id="status-bar_Time"></span>
+        <div class="status-bar__column">
+            <span id="status-bar__Time">22:02</span>
         </div>
-        <div class="status-bar_column">
+        <div class="status-bar__column">
             <span>110%</span>
-            <!-- Battery Icon -->
-            <!-- Lightning Icon -->
+            <i class="fa-solid fa-battery-three-quarters"></i>
+            <i class="fa-solid fa-bolt"></i>
         </div>
+
+        <header>
+            <h1>Welcome to YunseopTalk</h1>
+            <p>If you have a Yunseop Account, log in with your email or phone number.</p>
+        </header>
+
     </div>
+    <script src="https://kit.fontawesome.com/5fdb2a05ea.js" crossorigin="anonymous"></script>
 </body>
 </html>
