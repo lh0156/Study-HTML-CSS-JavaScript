@@ -6,13 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome to Yunseop talk</title>
-    <style>
-        .status-bar {
-            display: flex;
-            justify-content: space-around;
+<!--    <style>-->
+<!--        .status-bar {-->
+<!--            display: flex;-->
+<!--            justify-content: space-around;-->
 
-        }
-    </style>
+<!--        }-->
+<!--    </style>-->
 </head>
 <body>
     <div class="status-bar">
@@ -29,12 +29,22 @@
             <i class="fa-solid fa-bolt"></i>
         </div>
 
-        <header>
-            <h1>Welcome to YunseopTalk</h1>
-            <p>If you have a Yunseop Account, log in with your email or phone number.</p>
-        </header>
-
     </div>
+
+    <header class="welcome-header">
+        <h1 class="welcome-header__title">Welcome to YunseopTalk</h1>
+        <p class="welcome-header__text">If you have a Yunseop Account, log in with your email or phone number.</p>
+    </header>
+
+    <form id="login-form">
+        <input type="text" placeholder="Email or phone number">
+        <input type="password" placeholder="Password">
+        <input type="submit" value="Log in">
+        <a href="#">Find Yunseop Account or Password</a>
+
+    </form>
+
+
     <script src="https://kit.fontawesome.com/5fdb2a05ea.js" crossorigin="anonymous"></script>
 </body>
 </html>
