@@ -1,0 +1,43 @@
+.header {
+    background-color: #2ecc71;
+    grid-area: header;
+}
+
+.content {
+    background-color: #3498db;
+    grid-area: content;
+}
+
+.gird {
+    display: grid;
+    /* grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 300px 300px 300px 300px; */
+
+    /* Grid 가 가지고 있는 아주 좋은 함수가 있다. 그것은 바로 repeat! */
+
+    grid-template-columns: repeat(4, 200px);
+    /* grid-template-rows: repeat(4, 300px); */
+    grid-template-rows: 100px repeat(2, 200px) 100px;
+    grid-template-areas: 
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer";
+
+    /* 안된다 왜냐하면 header content footer nav가 각각 뭔지 모르기 때문! 그래서 등록해줘야한다
+    
+    grid area: 이름 의 문법으로 등록해주어야 함 스트링이면 안된다!!
+    
+    
+    */
+}
+
+.nav {
+    background-color: #8e44ad;
+    grid-area: nav;
+}
+
+.footer {
+    background-color: #f39c12;
+    grid-area: footer;
+}
