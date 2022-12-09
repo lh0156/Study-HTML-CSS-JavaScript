@@ -1,0 +1,59 @@
+/*
+    fr = fraction(부분)
+    fr은 사용 가능한 공간을 뜻한다.
+    여기서 사용 가능한 공간은 grid container에서 얻는다.
+    따라서 width를 500으로 픽스한 후 grid-template-columns를 1fr 1fr 1fr 1fr으로 주면
+    박스 오브젝트의 크기는 줄어든다 (117.5)
+
+    이 기능을 사용하게 되면 더이상 pixel을 사용하지 않아도 된다!
+
+    1fr = 화면의 반의 1/4 즉 "화면의 1/8"
+*/
+.grid {
+    display: grid;
+    gap: 5px;
+    height: 50vh;
+    /* width: 500px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 2fr 4fr 1fr 4fr;
+    /* 단순히 이렇게만 해줬을 경우 오브젝트들이 사라진다.
+       왜그럴까? fr은 가능한 많은 공간을 차지하는데 grid container의 height가 아주 작기 때문이다.
+       따라서 이를 해결하기 위해서는 grid container의 height를 주면 된다.
+    */
+    /* grid-template-rows: repeat(4, 1fr); */
+    
+    grid-template: 
+        "header header header header" 1fr
+        "content content content nav" 1fr 
+        "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr;
+    }
+
+
+.header {
+    background-color: #2ecc71;
+    /* grid-column: span 4; */
+    grid-area: header;
+}
+
+.content {
+    background-color: #3498db;
+    /* grid-column: 1/-2; */
+    /* grid-row: 2 / span 2; */
+    grid-area: content;
+}
+
+.nav {
+    background-color: #8e44ad;
+    /* grid-row: span 2; */
+    grid-area: nav;
+}
+
+.footer {
+    background-color: #f39c12;
+    /* grid-column: 1/-1;  */
+    /* -1은 끝이라는 의미 */
+    /* -2는 끝의 마지막 앞 */
+
+    /* grid-column: span 4; */
+    grid-area: footer;
+}
