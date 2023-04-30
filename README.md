@@ -1,4 +1,3 @@
-![2023년 3월 13일 야간식대](https://user-images.githubusercontent.com/62834176/228445793-d2335c96-c1de-42e6-9946-a6f74743591a.jpg)
 # 변수
 ## 변수 23/03/28
 
