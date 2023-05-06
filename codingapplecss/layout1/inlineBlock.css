@@ -23,7 +23,6 @@
     display: inline-block;
     /*
     상하 정렬. display:inline, inline-block인 요소에만 해당 됨
-
     */
     vertical-align: top;
 }
