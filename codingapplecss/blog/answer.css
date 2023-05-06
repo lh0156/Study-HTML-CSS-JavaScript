@@ -1,0 +1,46 @@
+.navbar li {
+    display: inline-block;
+    text-align: center;
+    background: #eee;
+    border-radius: 10px;
+    width: 60px;
+    height: 20px;
+    padding: 10px;
+}
+
+.navbar li a{
+    font-size: 16px;
+    text-decoration: none;
+}
+
+a:hover, a:visited, a:focus, a:active {
+
+}
+
+.container {
+    width: 800px;
+    display: block;
+    margin-left: 0 auto auto 0;
+}
+
+.blog-content {
+    width: 80%;
+    height: 200px;
+    float: left;
+}
+
+.blog-img {
+    width: 20%;
+    height: 200px;
+    float: left;
+}
+
+.blog-profile {
+    width: 50px;
+    display: block;
+    float: left;
+}
+
+.blog-name {
+    float: left;
+}
