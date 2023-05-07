@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-background {
+    width: 100%;
+    height: 500px;
+    background-image: url(../image/human.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* 명암 */
+    filter: brightness(70%);
+}
+
+.main-title {
+    color: white;
+    font-size: 30px;
+    padding-top: 150px;
+    text-align: center;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #F9E2AF;
+}
+
+button {
+    width: 100px;
+    height: 35px;
+    display: block;
+    margin-top: 20px;
+    margin-left: 45%;
+    font-size: 30px;
+    text-align: center;
+    background: #eee;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px darkslategrey;
+}
