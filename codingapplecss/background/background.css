@@ -11,7 +11,7 @@
     background-repeat: no-repeat;
     background-position: center;
     /* 명암 */
-    filter: brightness(70%);
+    position: relative;
 }
 
 .main-title {
@@ -21,25 +21,44 @@
     text-align: center;
 }
 
-p {
+.main-content {
     margin-top: 20px;
     font-size: 24px;
     text-align: center;
     color: #F9E2AF;
 }
 
-button {
+.main-button {
     width: 100px;
     height: 35px;
-    display: block;
-    margin-top: 20px;
-    margin-left: 45%;
     font-size: 30px;
     text-align: center;
-    background: #eee;
+    background: white;
     color: black;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 1px 1px 1px 1px darkslategrey;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    margin: auto;
+
+    z-index: 10000;
+
+}
+
+.main-textBox {
+    width: 80%;
+    max-width: 800px;
+    box-sizing: border-box;
+    padding: 50px;
+    height: 30%;
+    background: #eee;
+    position: relative;
+    bottom: 50px;
+    margin: auto;
+
 }
