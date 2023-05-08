@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: darkslategrey;
+}
+
+.container {
+    background: #eee;
+    width: 80%;
+    height: 500px;
+    margin: 200px auto auto;
+}
+
+.container > div{
+    background: inherit;
+    margin-left: 20px;
+}
+
+.title {
+    width: 90%;
+    height: 100px;
+    border: solid 1px black;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+
+
+.email {
+    width: 90%;
+    margin-top: 20px;
+    border: solid 1px black;
+}
+.name {
+    border: solid 1px black;
+    width: 90%;
+    margin-top: 15px;
+}
+
+.name-firstName {
+    width: 100%;
+    display: inline-block;
+}
+
+.name-firstName p {
+    width: 100%;
+}

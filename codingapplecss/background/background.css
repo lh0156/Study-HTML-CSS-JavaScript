@@ -47,7 +47,6 @@
     margin: auto;
 
     z-index: 10000;
-
 }
 
 .main-textBox {
@@ -61,4 +60,11 @@
     bottom: 50px;
     margin: auto;
 
+}
+
+input[type=text] {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
