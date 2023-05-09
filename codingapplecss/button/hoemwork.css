@@ -8,10 +8,11 @@ html {
 }
 
 .container {
-    background: #eee;
+    background: white;
     width: 80%;
     height: 500px;
     margin: 200px auto auto;
+    overflow: hidden;
 }
 
 .container > div{
@@ -22,7 +23,6 @@ html {
 .title {
     width: 90%;
     height: 100px;
-    border: solid 1px black;
     font-size: 40px;
     display: flex;
     align-items: center;
@@ -32,19 +32,77 @@ html {
 .email {
     width: 90%;
     margin-top: 20px;
-    border: solid 1px black;
 }
+
+.email input {
+    width: 95%;
+    height: 25px;
+    border-radius: 4px;
+    border-width: 1px;
+}
+
+input::placeholder {
+    padding-left: 20px;
+}
+
+input {
+    margin-top: 7px;
+}
+
 .name {
-    border: solid 1px black;
     width: 90%;
     margin-top: 15px;
 }
 
-.name-firstName {
-    width: 100%;
-    display: inline-block;
+.name-firstName, .name-lastName{
+    width: 50%;
+    float: left;
 }
 
-.name-firstName p {
-    width: 100%;
+.name-firstName input, .name-lastName input {
+    width: 90%;
+    height: 30px;
 }
+
+.message {
+    width: 90%;
+    margin-top: 90px;
+}
+
+.message input {
+    width: 95%;
+    height: 80px;
+    border-radius: 4px;
+    border-width: 1px;
+}
+
+.subscribe {
+    margin-top: 20px;
+    display: flex;
+}
+
+.subscribe-button {
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    border: none;
+    background: #BEBEBE;
+    float: left;
+}
+
+.subscribe p {
+    margin-top: 5px;
+    margin-left: 4px;
+}
+
+.subscribe button {
+    width: 100px;
+    font-size: 15px;
+    margin-left: 185px;
+    height: 35px;
+    background: #FFBF35;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+
