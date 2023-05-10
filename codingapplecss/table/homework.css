@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.container {
+    width: 100%;
+    height: 1000px;
+    background: #B2CCD6;
+    overflow: hidden;
+}
+
+.container-secondContainer {
+    width: 80%;
+    height: 500px;
+    border-radius: 5px;
+    /*border: solid 1px black;*/
+    margin: 200px auto;
+}
+
+.container-secondContainer p {
+    font-size: 25px;
+    font-weight: bolder;
+    color: #133761;
+}
+
+table {
+    margin-top: 20px;
+    height: 300px;
+    width: 100%;
+    /*border: 1px solid black;*/
+    border-radius: 5px;
+    background: white;
+}
+
+thead td {
+    text-align: center;
+    font-size: 20px;
+}
+
+small {
+    color: #133761;
+}
+
+table .item {
+    width: 40%;
+    height: 40%;
+}
+
+img {
+    float: left;
+    height: 80%;
+}
+
+.item-info {
+    vertical-align: bottom;
+}
+
+table .amount, table .price, table .total {
+    width: 20%;
+}
