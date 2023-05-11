@@ -53,13 +53,64 @@ table .item {
 
 img {
     float: left;
-    height: 80%;
+    height: 40%;
 }
 
-.item-info {
+.item-info{
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: bold;
     vertical-align: bottom;
 }
 
 table .amount, table .price, table .total {
     width: 20%;
 }
+
+button {
+    width: 200px;
+    height: 40px;
+    color: black;
+    background: cornflowerblue;
+    cursor: pointer;
+}
+
+button:hover {
+    background: yellow;
+}
+
+button:focus {
+    background: blue;
+}
+
+button:active {
+    background: brown;
+}
+
+.input-test {
+    width: 300px;
+    cursor: all-scroll;
+}
+
+.input-test:hover {
+    width: 400px;
+    border: 5px solid red;
+    cursor: all-scroll;
+}
+
+.input-test:focus {
+    border: 5px solid red;
+}
+
+.custom-link {
+    text-decoration: none;
+}
+
+.custom-link:link {
+    color: violet;
+}
+
+.custom-link:visited {
+    color: violet;
+}
+
