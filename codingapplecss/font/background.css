@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-background {
+    width: 100%;
+    height: 500px;
+    background-image: url(../image/human.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* 명암 */
+    position: relative;
+}
+
+.main-title {
+    color: white;
+    font-size: 30px;
+    padding-top: 150px;
+    text-align: center;
+}
+
+.main-content {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #F9E2AF;
+}
+
+.main-button {
+    width: 100px;
+    height: 35px;
+    font-size: 30px;
+    text-align: center;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px darkslategrey;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    margin: auto;
+
+    z-index: 10000;
+}
+
+.main-textBox {
+    width: 80%;
+    max-width: 800px;
+    box-sizing: border-box;
+    padding: 50px;
+    height: 30%;
+    background: #eee;
+    position: relative;
+    bottom: 50px;
+    margin: auto;
+
+}
+
+input[type=text] {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}

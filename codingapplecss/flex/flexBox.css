@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+.flex-container {
+    display: flex;
+}
+
+
+.flex-item {
+    width: 100px;
+    height: 100px;
+    background: #d49466;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.flex-item:first-child {
+    font-size: 40px;
+}
+
+.flex-item:nth-child(2), .flex-item:nth-child(3) {
+    font-size: 30px;
+}
