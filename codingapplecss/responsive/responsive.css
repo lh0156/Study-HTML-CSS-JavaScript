@@ -1,0 +1,28 @@
+.responsive-test {
+    /*
+        1. viewport width
+        브라우저의 폭에 비례
+
+        2. rem (html 폰트 사이즈에 비례)
+        html 기본 폰트 사이즈는 기본적으로 16px로 설정되어 있음.
+        쓰는 이유
+        1. 옛날 브라우저들은 웹 사이트에 글씨를 키우고 싶으면 폰트 사이즈 옵션을 키워야했음.
+            1.1. 이렇게 했을 떄 폰트 사이즈만 늘어나고 padding 등은 그대로 있기 때문에 레이아웃이 깨짐
+            1.2. 그래서 rem 단위가 등장
+
+        즉, 그래서 이제 안씀 ㅋ ㅋ
+        요즘은 typography 디자인할 때 px 외우기 귀찮으면 사용함.
+
+        3. 내 폰트 사이즈의 X배
+     */
+
+    width: 100vw;
+
+    /*
+        viewport height
+        브라우저의 폭에 비례
+     */
+    height: 100px;
+    background: grey;
+    border: 1px solid black;
+}
