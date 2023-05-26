@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        div {
+            box-sizing: border-box;
+        }
+
+        .container {
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container-title {
+            margin-top: 300px;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .container-count {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        .container-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            border-radius: 5px;
+            width: 100px;
+            height: 30px;
+            background: white;
+        }
+
+        .decrease, .reset {
+            margin-right: 30px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        .increase {
+            border-color: #0054C8;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="container-title">
+            Counter
+        </div>
+        
+        <div class="container-count">
+            
+        </div>
+
+        <div class="container-button">
+            <button class="decrease">DECREASE</button>
+            <button class="reset">RESET</button>
+            <button class="increase">INCREASE</button>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        let count = 0;
+
+        let countElement = document.querySelector('.container-count');
+        countElement.innerHTML = count;
+
+        // decrease
+        let decreaseButton = document.querySelector('.decrease');
+        decreaseButton.addEventListener("click", function() {
+            --count;
+            countElement.innerHTML = count;
+            setColor();
+        })
+
+        // reset
+        let resetButton = document.querySelector('.reset');
+        resetButton.addEventListener("click", function() {
+            count = 0;
+            countElement.innerHTML = count;
+            setColor();
+        })
+
+        // increase
+        let increaseButton = document.querySelector('.increase');
+        increaseButton.addEventListener("click", function() {
+            ++count;
+            countElement.innerHTML = count;
+            setColor();
+        })
+
+        // setColor
+        function setColor() {
+            if(count > 0) {
+            countElement.style.color = "blue";
+            } else if (count == 0) {
+                countElement.style.color = "black";
+            } else {
+                countElement.style.color = "red";
+            } 
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Maker</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            background: #EDF1F4;
+        }
+
+        div {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+            margin-top: 5%;
+        }
+
+        .container-title {
+            font-size: 40px;
+            color: #0D3856;
+            letter-spacing :5px;
+            font-weight: 1000;
+        }
+
+        .container-input {
+            margin-top: 3%;
+            font-size: 30px;
+            color: #0D3856;
+            letter-spacing :15px;
+        }
+
+        .txtParaghs {
+            width: 10%;
+            height: 4vh;
+            border-radius: 10px;
+            background: white;
+            border: none;
+        }
+
+        .btnGenerate {
+            width: 5%;
+            height: 4vh;
+            border-radius: 10px;
+            font-weight: 500;
+            background: #49A6EA;
+            border: #0F6DD2 2px solid;
+        }
+
+        .container-result {
+            margin-top: 70px;
+            text-align: center;
+            font-size: 24px;
+            color: #617D9E;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="container-title">
+            TIRED OF BORING LOREM IPSUM?
+        </div>
+
+        <div class="container-input">
+            Paragraphs:<input type="text" class="txtParaghs"> <button class="btnGenerate" style="cursor: pointer;">GENERATE</button>
+        </div>
+
+        <div class="container-result">
+            temptemp
+        </div>
+
+    </div>
+    <script>
+
+        // 버튼
+        let btn = document.querySelector('.btnGenerate');
+
+        btn.addEventListener('click', function() {
+            // 숫자
+            let count = parseInt(document.querySelector('.txtParaghs').value);
+            let min = 1;
+            let max = word.length;
+
+            let resultword = "";
+            for(let i=0; i<count; ++i) {
+                let randomInteger = Math.floor(Math.random() * (max));
+                resultword = resultword + word[randomInteger] + " ";
+            }
+            
+            document.querySelector('.container-result').innerHTML = resultword;
+
+        });
+        
+
+        // 단어 더미 리스트
+        let word = [];
+        word.push("dba");
+        word.push("prize");
+        word.push("dangerous");
+        word.push("repairman");
+        word.push("someday");
+        word.push("i");
+        word.push("my");
+        word.push("me");
+        word.push("mine");
+        word.push("we");
+        word.push("us");
+    </script>
+</body>
+</html>

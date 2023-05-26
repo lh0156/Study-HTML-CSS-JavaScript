@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-btn {
+    width: 150px;
+    font-size: 20px;
+    height: 100px;
+    border: none;
+}
+
+.bg-blue {
+    background: blue;
+}
+
+.bg-red {
+    background: red;
+}
