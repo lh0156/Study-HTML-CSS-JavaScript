@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'goodFont';
+    src: url(NanumSquareAcB.woff2);
+}
+
+div, input, textarea {
+    box-sizing: content-box;
+}
+
+/*
+    한글 폰트 사이즈는 너무 크다
+    웹용에서는 woff
+*/
+body {
+    font-family: 'goodFont', serif;
+
+}
+
+p, h4, h3, h2, h1, span {
+    transform: rotate(1.1deg);
+}
