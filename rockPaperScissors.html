@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .result {
+            font-size: 50px;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .rock, .paper, .scissors {
+            border: 1px solid black;
+            border-radius: 100%;
+            width: 10%;
+            height: 8%;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .rock:hover, .paper:hover, .scissors:hover {
+            background: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="result">
+
+    </div>
+
+    <div class="container">
+
+        <div class="rock">
+            ✊
+        </div>
+
+        <div class="paper">
+            ✌️
+        </div>
+
+        <div class="scissors">
+            ✋
+        </div>
+    </div>
+    <script>
+
+        let result = ["✊", "✌️", "✋"];
+
+        let rock = document.querySelector('.rock');
+        let paper = document.querySelector('.paper');
+        let scissors = document.querySelector('.scissors');
+
+        let mySelect = -1;
+        let yourSelect = -1;
+
+        let resultDoc = document.querySelector('.result');
+
+        rock.addEventListener('click', function() {
+            mySelect = 0;
+            yourSelect = Math.floor(Math.random() * 3);
+            resultDoc.innerHTML = result[yourSelect] + versus(mySelect, yourSelect);
+        })
+
+        paper.addEventListener('click', function() {
+            mySelect = 1;
+            yourSelect = Math.floor(Math.random() * 3);
+            resultDoc.innerHTML = result[yourSelect] + versus(mySelect, yourSelect);
+        })
+
+        scissors.addEventListener('click', function() {
+            mySelect = 2;
+            yourSelect = Math.floor(Math.random() * 3);
+            resultDoc.innerHTML = result[yourSelect] + versus(mySelect, yourSelect);
+
+        })
+
+        function versus(mySelect, yourSelect) {
+            if (mySelect === 0) {
+                if(yourSelect === 0) {
+                    return "비김";
+                } else if (yourSelect === 1) {
+                    return "이김";
+                } else {
+                    return "짐";
+                }
+            } else if (mySelect === 1) {
+                if(yourSelect === 0) {
+                    return "짐";
+                } else if (yourSelect === 1) {
+                    return "비김";
+                } else {
+                    return "이김";
+                }
+            } else {
+                if(yourSelect === 0) {
+                    return "이김";
+                } else if (yourSelect === 1) {
+                    return "짐";
+                } else {
+                    return "비김";
+                }
+            }
+        }
+
+
+    </script>
+</body>
+</html>
