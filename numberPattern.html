@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function validateNumber(input) {
+        // 숫자 패턴을 정의합니다. 숫자 0부터 9까지의 문자열로 이루어진 패턴입니다.
+        let numberPattern = /^[0-9]+$/;
+
+        // 입력된 값과 숫자 패턴을 비교하여 일치하는지 확인합니다.
+        // 일치하는 경우 입력된 값은 숫자입니다.
+        return numberPattern.test(input);
+    }
+
+    // 테스트
+    console.log(validateNumber("123"));    // true
+    console.log(validateNumber("abc"));    // false
+    console.log(validateNumber("1.23"));   // false
+    console.log(validateNumber("10px"));   // false
+
+    function validationNumber2(input) {
+
+        return !isNaN(parseFloat(input));
+
+    }
+
+    console.log("------------------------");
+
+    console.log(validationNumber2("123"));    // true
+    console.log(validationNumber2("abc"));    // false
+    console.log(validationNumber2("1.23"));   // false
+    console.log(validationNumber2("10px"));   // false
+
+    console.log(`parseFloat${parseFloat("10px")}`);
+
+
+
+</script>
+</body>
+</html>
