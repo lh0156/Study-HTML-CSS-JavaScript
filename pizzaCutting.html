@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /**
+         * 머쓱이네 피자가게는 피자를 일곱 조각으로 잘라 줍니다.
+         * 피자를 나눠먹을 사람의 수 n이 주어질 때, 모든 사람이 피자를 한 조각 이상 먹기 위해 필요한 피자의 수를 return 하는 solution 함수를 완성해보세요.
+         * 
+         * 입출력 예 #1
+
+            7명이 최소 한 조각씩 먹기 위해서 최소 1판이 필요합니다.
+            입출력 예 #2
+
+            1명은 최소 한 조각을 먹기 위해 1판이 필요합니다.
+            입출력 예 #3
+
+            15명이 최소 한 조각씩 먹기 위해서 최소 3판이 필요합니다.
+
+            경우의 수
+            1. 7보다 클 때
+                1.1. 딱 떨어질 때
+                1.2. 딱 떨어지지 않을 때
+            2. 7보다 작을 때
+                무조건 1
+        */
+       console.log(solution(15));
+
+        function solution(n) {
+            var answer = 0;
+
+            if (n > 7) {
+
+                if(n % 7 == 0) {
+                    answer = n / 7;
+                } else {
+                    answer = n / 7 + 1;
+                }
+
+            } else {
+                answer = 1;
+            }
+
+            return Math.floor(answer);
+        }
+
+
+    </script>
+</body>
+</html>
