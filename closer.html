@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function book() {
+            var point = 100;
+
+            let getPoint = function(param) {
+                point = point + param;
+                return point;
+            }
+
+            return getPoint;
+        }
+
+        var obj = book();
+        console.log(obj(300));
+
+    </script>
+</body>
+</html>
